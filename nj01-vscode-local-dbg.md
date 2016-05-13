@@ -16,11 +16,11 @@ Two types of local debugging possibility for a node.js app on Visual Studio Code
  
 
 ###**Debugging by launching a new instance:**
-1. Create an empty folder name it i.e. "nj-dbg-local"
+1. Create an empty folder name it i.e. **"nj-dbg-local"**
 
-2. Run Visual Studio Code. From File menu, click Open to open Select File dialog window.  In the Select File dialog window select the empty folder name that you just created and click Open. Now our working folder is set to "nj-dbg-local"
+2. **Run** Visual Studio Code. From **File** menu, click **Open** to open **Select File** dialog window.  In the **Select File** dialog window select the empty folder name (which is **"nj-dbg-local"**) that you just created and click **Open**. Now our working folder is set to "nj-dbg-local"
 
-3. Create a new file in our working directory: From File menu, click New File. Copy/Paste the below node.js code into the new file that is open in the editor.
+3. Create a new file in our working directory: From **File** menu, click **New File**. Copy/Paste the below node.js code into the new file that is open in the editor.
 ```node
   // Load the http module to create an http server. 
   var http = require('http'); 
