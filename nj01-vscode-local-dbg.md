@@ -79,3 +79,29 @@ here **--debug-brk** parameter sets the node app to break on the execution of th
 ![](./imgs/nj01-10.jpg)  
 
 5. When you click the **RUN** button at the previsous step, the execution will start and will break at the first line. Afterwards you can continue execution or monitor variables, stack etc.  
+
+###**Interacting through console in debugging:**
+You can use an external terminal window or set the debugger to break while executing the first line of the code through the **launch.js** file.
+1. Use the following sample code to get user input from standard input.
+```node
+  const readline = require('readline');
+
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  rl.question('command>  ', (answer) => {
+    console.log('Your command: ', answer);
+
+    rl.close();
+  });
+```
+2. Set a break point on the line that starts with *"console.log(..."*  
+![](./imgs/nj01-11.jpg)  
+
+3. Update the **launch.json** file to use an external terminal window for user inputs and to let the debugger break the execution on the first line.  
+![](./imgs/nj01-12.jpg)  
+
+4. **RUN** the app in launch mode. You will the execution will break on the entry, on the first line of the code. You can continue execution which will stop on the next break point.  
+![](./imgs/nj01-13.jpg)  
